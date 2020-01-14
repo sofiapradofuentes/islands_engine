@@ -12,6 +12,7 @@ defmodule IslandsEngine.GameSupervisor do
     Supervisor.start_child(__MODULE__, [name])
 
   def stop_game(name) do
+    :ets.delete(:game_state, name)
     Supervisor.terminate_child(__MODULE__, pid_from_name(name))
   end
 
@@ -20,4 +21,5 @@ defmodule IslandsEngine.GameSupervisor do
     |> Game.via_tuple()
     |> GenServer.whereis()
   end
+
 end
