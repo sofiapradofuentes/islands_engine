@@ -1,6 +1,8 @@
 # IslandEngine
 
-**TODO: Add description**
+Elixir game core
+
+It’s a game for two players, and each player has a board, which consists of a grid of one hundred coordinates. The grid is labeled with the numbers 1 through 10 across the top for the columns and down the left side for the rows. We name individual coordinates with this row-column combination.
 
 ## Installation
 
